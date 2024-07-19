@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Регистрация</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form class="decor" id="LoginForm">
+        <div class="form-left-decoration"></div>
+        <div class="form-right-decoration"></div>
+        <div class="circle"></div>
+        <div class="form-inner">
+            <div class="title">Регистрация</div>
+            <div class="content">
+                <div class="input-box">
+                    <label for="username" class="name">Имя:</label>
+                    <input type="text" maxlength="40" name="username" id="username" class="input">
+                </div>
+                <div class="email-box">
+                    <input placeholder="Email" type="email" class="input-mail" id="email">
+                    <span>@gmail.com</span>
+                </div>
+                <div class="input-box">
+                    <label for="password" class="name">Пароль:</label>
+                    <input type="password" name="password" id="password" class="input" minlength="4" maxlength="8">
+                </div>
+                <div class="input-box">
+                    <label for="password" class="name">Подтвердите пароль:</label>
+                    <input type="password" name="confPassword" id="confPassword" class="input" minlength="4" maxlength="8">
+                </div>
+                <div class="input-box">
+                    <label for="password" class="name">Дата рождения:</label>
+                    <input type="text" name="birthday" id="birthday" class="input" placeholder="dd/mm/yyyy">
+                </div>
+                <label for="counties" class="name">Страна рождения:</label>
+                <select name="country" id="counties">
+                    <option value="" disabled selected>--Выберите одну--</option>
+                    <option value="Молдова">Молдова</option>
+                    <option value="Италия">Италия</option>
+                    <option value="Румыния">Румыния</option>
+                    <option value="США">США</option>
+                    <option value="Франция">Франция</option>
+                    <option value="Великобритания">Великобритания</option>
+                    <option value="Германия">Германия</option>
+                    <option value="Россия">Россия</option>
+                    <option value="Аргентина">Аргентина</option>
+                    <option value="Южная Корея">Южная Корея</option>
+                </select>
+                <fieldset class="hobbi">
+                    <legend class="name">Хобби</legend>
+                    <label class="check">
+                        <input type="checkbox" id="swiming" name="hobbies" value="swim">
+                        <div class="checkmark"></div>
+                        Плавание
+                    </label>                                                                                                                                                                                                                                                                                                                          
+                    <label class="check">
+                        <input type="checkbox" id="reading" name="hobbies" value="reading">
+                        <div class="checkmark"></div>
+                        Чтение
+                    </label> 
+                    <label class="check">
+                        <input type="checkbox" id="nothing" name="hobbies" value="nothing">
+                        <div class="checkmark"></div>
+                        Ничего неделанье
+                    </label>
+                </fieldset>
+                <textarea name="comment" id="dopInf" cols="35" rows="6" placeholder="Введите краткую информацию о себе..."></textarea>
+                <div class="dop-details">
+                    <input type="radio" id="yes" name="options" value="yes">
+                    <input type="radio" id="ofcourse" name="options" value="ofcourse">
+                    <input type="radio" id="pleasure" name="options" value="pleasure">
+                    <span class="name">Вы хотите получать нашу рассылку?</span>
+                    <div class="category">
+                        <label for="yes">
+                            <span class="dot one"></span>
+                            <span>Да</span>
+                        </label>
+                        <label for="ofcourse">
+                            <span class="dot two"></span>
+                            <span>Конечно</span>
+                        </label>
+                        <label for="pleasure">
+                            <span class="dot three"></span>
+                            <span>С удовольствием</span>
+                        </label>
+                    </div>
+                </div>
+                <input type="submit" value="Отправить" class="button">
+            </div> 
+        </div>
+    </form>
+    <script src="ex.js"></script>
+</body>
+</html>

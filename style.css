@@ -1,0 +1,432 @@
+* {
+    box-sizing: border-box;
+ }
+
+ body {
+    margin: 0;
+    padding: 0;
+    background: #f69a73;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+ }
+
+ .decor {
+    position: relative;
+    max-width: 650px;
+    margin: 50px auto 0;
+    background: white;
+    border-radius: 30px;
+ }
+
+ .form-left-decoration, .form-right-decoration {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    background: #f69a73;
+    border-radius: 20px;
+ }
+
+ .form-left-decoration {
+    bottom: 60px;
+    left: -30px;
+ }
+
+ .form-right-decoration {
+    top: 60px;
+    right: -30px;
+ }
+
+ .form-left-decoration:before, .form-left-decoration:after, .form-right-decoration:before, .form-right-decoration:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    border-radius: 30px;
+    background: white;
+ }
+
+ .form-left-decoration:before {
+    top: -20px;
+ }
+
+ .form-left-decoration:after {
+    top: 20px;
+    left: 10px;
+ }
+
+ .form-right-decoration:before {
+    top: -20px;
+    right: 0;
+ }
+
+ .form-right-decoration:after {
+    top: 20px;
+    right: 10px;
+ }
+
+ .circle {
+    position: absolute;
+    bottom: 80px;
+    left: -55px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+ }
+
+.form-inner {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-inner .title {
+    font-family: 'Roboto', sans-serif;
+    color: #707981;
+    font-size: 35px;
+    font-weight: 500;
+    position: relative;
+}
+
+.form-inner .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 3px;
+    width: 120px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #f69a73, #f7d9c4);
+}
+
+.form-inner .content {
+    margin: 28px 0 12px 0;
+}
+
+.name {
+    color: rgb(54, 53, 53);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.content .input-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 450px;
+}
+
+.content .input-box .input {
+  height: 40px;
+  border-radius: 1rem;
+  margin-left: 15px;
+  background: none;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+}
+   
+.content .input-box input:focus {
+    outline: none;
+    border: 1.5px solid #fb7f4a;
+    border-bottom-width: 2px;
+}
+
+.email-box {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 290px;
+    height: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+  
+.email-box > span,
+.email-box .input-mail {
+    white-space: nowrap;
+    display: block;
+}
+  
+.email-box > span,
+.email-box .input-mail:first-child {
+    border-radius: 6px 0 0 6px;
+}
+
+.email-box > span,
+.email-box .input-mail {
+  border-radius: 0 6px 6px 0;
+}
+
+.email-box > span,
+.email-box .input-mail {
+  margin-left: -1px;
+}
+  
+.email-box .input-mail {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+  
+.email-box span {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 15px;
+    line-height: 20px;
+    color: #6b7385;
+    background: #d4def5;
+    border: 1px solid #CDD9ED;
+    font-weight: bold;
+    transition: background 0.3s ease, border 0.3s ease, color 0.3s ease;
+}
+  
+.email-box:focus-within > span {
+    color: #fff;
+    background-color: #f86f8d;
+    border-color: #f6486e;
+}
+  
+.input-mail {
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 6px;
+    color: #99A3BA;
+    border: 1px solid  #CDD9ED;
+    background: #fff;
+    transition: border 0.3s ease;
+}
+  
+.input-mail::placeholder {
+    color: #706f6f;
+}
+  
+.input-mail:focus {
+    outline: none;
+    border-color: #148cd1;
+}
+
+select {
+    width: 200px;
+    height: 40px;
+    line-height: 28px;
+    font-size: 14px;
+    padding: 0 1rem;
+    padding-left: 1rem;
+    margin-left: 15px;
+    border: 2px solid rgb(192, 192, 232);
+    border-radius: 10px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+select:focus, select:hover {
+    outline: none;
+    border-color: rgba(234,76,137,0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+}
+
+.hobbi {
+    max-width: 250px;
+    font-size: 19px;
+    margin-top: 18px;
+}
+
+textarea {
+    margin-top: 25px;
+    border-radius: 1rem;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    resize: none;
+}
+
+textarea:focus {
+    outline: none;
+    border: 1.5px solid #fb7f4a;
+    border-bottom-width: 2px;
+}
+
+.check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    border-radius: 5px;
+}
+   
+.check {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 0px rgb(183, 183, 183);
+}
+   
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    background-color: #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+   
+.check, .checkmark {
+    box-shadow: none;
+}
+
+.check input:checked ~ .checkmark {
+    box-shadow: 3px 3px 0px rgb(183, 183, 183);
+    transition: all 0.2s;
+    opacity: 1;
+    background-image: linear-gradient(40deg, rgb(100, 61, 219) 0%, rgb(217, 21, 239) 100%);
+}
+   
+.check input ~ .checkmark {
+    transition: all 0.2s;
+    opacity: 1;
+    box-shadow: 1px 1px 0px rgb(183, 183, 183);
+}
+   
+.checkmark:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    transition: all 0.2s;
+}
+   
+.check input:checked ~ .checkmark:after {
+    opacity: 1;
+    transition: all 0.2s;
+}
+   
+.check .checkmark:after {
+    left: 0.45em;
+    top: 0.25em;
+    width: 0.25em;
+    height: 0.5em;
+    border: solid white;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotate(45deg);
+}
+
+form .dop-details {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: 22px;
+    margin-bottom: 10px;
+}
+
+form .category {
+    display: flex;
+    margin: 14px 0px;
+}
+
+form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+form .category label .dot {
+   height: 18px;
+   width: 18px;
+   border-radius: 50%;
+   margin-right: 10px;
+   background: #d9d9d9;
+   border: 5px solid transparent;
+   transition: all 0.3s ease;
+}
+
+form input[type="radio"] {
+    display: none;
+}
+
+#yes:checked ~ .category label .one,
+#ofcourse:checked ~ .category label .two,
+#pleasure:checked ~ .category label .three {
+    background: #9b59b6;
+    border-color: #d9d9d9;
+}
+
+.button {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    max-width: 400px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 13px;
+    padding-right: 13px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 17px;
+    margin-top: 15px;
+  }
+  
+  .button:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  }
+  
+  .button:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .button:active {
+    box-shadow: #3c4fe0 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+.invalid {
+    border: 1.3px solid red !important;
+    border-bottom-width: 2px;
+}
+
+.error { 
+    color: red; 
+    font-size: 17px; 
+    margin-top: 10px;
+}
